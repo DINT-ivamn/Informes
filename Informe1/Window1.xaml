@@ -1,0 +1,55 @@
+﻿<Window x:Class="Informe1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cr="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+        Title="WPF Crystal Report Viewer" Height="600" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="20" Source="Ico/client.ico"/>
+                        <TextBlock Text="Informe de clientes"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="ClientesCrystalReportsViewer"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Ico/flag.ico"/>
+                        <TextBlock Text="Informe de clientes agrupado por país"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="ClientesPaisCrystalReportsViewer"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Ico/box.ico"/>
+                        <TextBlock Text="Informe de pedidos para un cliente"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="PedidosClientesCrystalReportsViewer"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Ico/sex.ico"/>
+                        <TextBlock Text="Distribución de hombres y mujeres"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="DistribucionSexoCrystalReportsViewer"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Ico/sent.ico"/>
+                        <TextBlock Text="Informe de pedidos enviados"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="PedidosEnviadosCrystalReportsViewer"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
