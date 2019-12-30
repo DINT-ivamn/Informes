@@ -8,7 +8,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Width="20" Height="20" Source="Ico/client.ico"/>
+                        <Image Width="20" Height="10" Source="Ico/client.ico"/>
                         <TextBlock Text="Informe de clientes"/>
                     </StackPanel>
                 </TabItem.Header>
