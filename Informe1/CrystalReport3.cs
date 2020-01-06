@@ -90,7 +90,7 @@ namespace Informe1 {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Nombre {
+        public CrystalDecisions.Shared.IParameterField Parameter_ID_Cliente {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
