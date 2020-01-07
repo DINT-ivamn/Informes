@@ -3,51 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:cr="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
         Title="WPF Crystal Report Viewer" Height="600" Width="800">
-    <TabControl>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="20" Height="10" Source="Ico/client.ico"/>
-                    <TextBlock Text="Informe de clientes"/>
-                </StackPanel>
-            </TabItem.Header>
-            <cr:CrystalReportsViewer x:Name="ClientesCrystalReportsViewer"/>
-        </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Ico/flag.ico"/>
-                    <TextBlock Text="Informe de clientes agrupado por país"/>
-                </StackPanel>
-            </TabItem.Header>
-            <cr:CrystalReportsViewer x:Name="ClientesPaisCrystalReportsViewer"/>
-        </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Ico/box.ico"/>
-                    <TextBlock Text="Informe de pedidos para un cliente"/>
-                </StackPanel>
-            </TabItem.Header>
-            <cr:CrystalReportsViewer x:Name="PedidosClientesCrystalReportsViewer"/>
-        </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Ico/sex.ico"/>
-                    <TextBlock Text="Distribución de hombres y mujeres"/>
-                </StackPanel>
-            </TabItem.Header>
-            <cr:CrystalReportsViewer x:Name="DistribucionSexoCrystalReportsViewer"/>
-        </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Ico/sent.ico"/>
-                    <TextBlock Text="Informe de pedidos enviados"/>
-                </StackPanel>
-            </TabItem.Header>
-            <cr:CrystalReportsViewer x:Name="PedidosEnviadosCrystalReportsViewer"/>
-        </TabItem>
-    </TabControl>
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+    </Window.Resources>
+    <ScrollViewer>
+    <StackPanel>
+            <cr:CrystalReportsViewer Name="Informe1Viewer"/>
+            <cr:CrystalReportsViewer Name="Informe2Viewer"/>
+            <cr:CrystalReportsViewer Name="Informe3Viewer"/>
+            <cr:CrystalReportsViewer Name="Informe4Viewer"/>
+            <cr:CrystalReportsViewer Name="Informe5Viewer"/>
+    </StackPanel>
+    </ScrollViewer>
 </Window>

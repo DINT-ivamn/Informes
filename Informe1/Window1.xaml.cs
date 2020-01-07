@@ -7,15 +7,15 @@ namespace Informe1
     /// </summary>
     public partial class Window1 : Window
     {
+
         public Window1()
         {
             InitializeComponent();
-
-            ClientesCrystalReportsViewer.Owner = this;
-            ClientesPaisCrystalReportsViewer.Owner = this;
-            PedidosClientesCrystalReportsViewer.Owner = this;
-            DistribucionSexoCrystalReportsViewer.Owner = this;
-            PedidosEnviadosCrystalReportsViewer.Owner = this;
+            Informe1Viewer.Owner = this;
+            Informe2Viewer.Owner = this;
+            Informe3Viewer.Owner = this;
+            Informe4Viewer.Owner = this;
+            Informe5Viewer.Owner = this;
 
             CrystalReport1 informeClientes = new CrystalReport1();
             CrystalReport2 informeClientesPais = new CrystalReport2();
@@ -29,11 +29,11 @@ namespace Informe1
             informeDistribucionSexo.SetDatabaseLogon("administrador", "admin123.");
             informePedidosEnviados.SetDatabaseLogon("administrador", "admin123.");
 
-            ClientesCrystalReportsViewer.ViewerCore.ReportSource = informeClientes;
-            ClientesPaisCrystalReportsViewer.ViewerCore.ReportSource = informeClientesPais;
-            PedidosClientesCrystalReportsViewer.ViewerCore.ReportSource = informePedidosClientes;
-            DistribucionSexoCrystalReportsViewer.ViewerCore.ReportSource = informeDistribucionSexo;
-            PedidosEnviadosCrystalReportsViewer.ViewerCore.ReportSource = informePedidosEnviados;
+            Informe1Viewer.ViewerCore.ReportSource = informeClientes;
+            Informe2Viewer.ViewerCore.ReportSource = informeClientesPais;
+            Informe3Viewer.ViewerCore.ReportSource = informePedidosClientes;
+            Informe4Viewer.ViewerCore.ReportSource = informeDistribucionSexo;
+            Informe5Viewer.ViewerCore.ReportSource = informePedidosEnviados;   
         }
     }
 }
